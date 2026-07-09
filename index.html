@@ -8,6 +8,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght=300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="foto/logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
 </head>
 
@@ -17,7 +19,8 @@
 <div class="navbar">
 
 <div class="logo">
-ودق ميديا
+    <img src="foto/logo.png" alt="لوجو ودق ميديا" class="logo-img">
+    <span>ودق ميديا</span>
 </div>
 
 <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
@@ -44,7 +47,7 @@
 <h2>حيثُ تصيرُ اللَّحظاتُ حِكايَة</h2>
 
 <p>
-نحوُّلُ الأفكارَ إلى حِكايةٍ تنبضُ بلحظاتِ الجمالِ الخالدة
+نحوُّلُ الأفكارَ إلى حِكايةٍ تنبضُ بلحظاتِ الجمالِ الخالدة
 </p>
 
 <a href="#contact" class="btn">
@@ -138,14 +141,14 @@
 </h2>
 
 <div class="gallery" style="margin-bottom: 40px;">
-    <img src="foto/1.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/2.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/3.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/4.jpg" alt="من أعمال ودق ميديا">
+    <a href="foto/1.jpg" data-fancybox="main-gallery"><img src="foto/1.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/2.jpg" data-fancybox="main-gallery"><img src="foto/2.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/3.jpg" data-fancybox="main-gallery"><img src="foto/3.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/4.jpg" data-fancybox="main-gallery"><img src="foto/4.jpg" alt="من أعمال ودق ميديا"></a>
 </div>
 
 <a href="gallery.html" class="btn">
-مشاهدة كافة أعمالنا
+مشاهدة كافة أعمالنا 
 </a>
 
 </div>
@@ -218,12 +221,19 @@
 
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/905537457003">
+<a class="whatsapp" href="https://wa.me/905537457003">
 💬
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
 <script>
+// كود التشغيل الافتراضي
+Fancybox.bind("[data-fancybox='main-gallery']", {
+    Thumbs: { autoStart: false }
+});
+
+// كود القائمة الجانبية المكتمل بالكامل
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 
