@@ -8,14 +8,26 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght=300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="foto/logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
+<style>
+    /* ستايل إضافي لجعل مؤشر الماوس يشير إلى إمكانية الضغط */
+    .gallery a {
+        display: block;
+        cursor: zoom-in;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
 <div class="navbar">
-<div class="logo">ودق ميديا</div>
+<div class="logo">
+    <img src="foto/logo.png" alt="لوجو ودق ميديا" class="logo-img">
+    <span>ودق ميديا</span>
+</div>
 <div class="menu">
     <a href="index.html#home">الرئيسية</a>
     <a href="index.html#services">خدماتنا</a>
@@ -31,26 +43,26 @@
 <p style="font-size: 18px; color: #cfd8e3; margin-bottom: 45px;">مجموعة مختارة من أبرز اللحظات والقصص التي وثقناها بعين الإبداع.</p>
 
 <div class="gallery">
-    <img src="foto/1.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/2.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/3.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/4.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/5.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/6.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/7.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/8.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/9.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/10.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/11.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/12.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/13.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/14.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/15.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/16.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/17.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/18.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/19.jpg" alt="من أعمال ودق ميديا">
-    <img src="foto/20.jpg" alt="من أعمال ودق ميديا">
+    <a href="foto/1.jpg" data-fancybox="gallery"><img src="foto/1.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/2.jpg" data-fancybox="gallery"><img src="foto/2.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/3.jpg" data-fancybox="gallery"><img src="foto/3.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/4.jpg" data-fancybox="gallery"><img src="foto/4.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/5.jpg" data-fancybox="gallery"><img src="foto/5.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/6.jpg" data-fancybox="gallery"><img src="foto/6.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/7.jpg" data-fancybox="gallery"><img src="foto/7.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/8.jpg" data-fancybox="gallery"><img src="foto/8.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/9.jpg" data-fancybox="gallery"><img src="foto/9.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/10.jpg" data-fancybox="gallery"><img src="foto/10.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/11.jpg" data-fancybox="gallery"><img src="foto/11.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/12.jpg" data-fancybox="gallery"><img src="foto/12.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/13.jpg" data-fancybox="gallery"><img src="foto/13.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/14.jpg" data-fancybox="gallery"><img src="foto/14.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/15.jpg" data-fancybox="gallery"><img src="foto/15.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/16.jpg" data-fancybox="gallery"><img src="foto/16.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/17.jpg" data-fancybox="gallery"><img src="foto/17.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/18.jpg" data-fancybox="gallery"><img src="foto/18.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/19.jpg" data-fancybox="gallery"><img src="foto/19.jpg" alt="من أعمال ودق ميديا"></a>
+    <a href="foto/20.jpg" data-fancybox="gallery"><img src="foto/20.jpg" alt="من أعمال ودق ميديا"></a>
 </div>
 
 <div style="margin-top: 50px;">
@@ -63,6 +75,16 @@
 <footer>
 © 2026 Wadaq Media <br> جميع الحقوق محفوظة
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    // تفعيل ميزة التكبير والتقليب تلقائياً
+    Fancybox.bind("[data-fancybox='gallery']", {
+        // إعدادات إضافية (اختيارية) لتجربة مستخدم أفضل
+        Thumbs: { autoStart: false }, // إخفاء الصور المصغرة بالأسفل لعدم التشويش
+        Toolbar: { display: { left: [], middle: [], right: ["close"] } } // إبقاء زر الإغلاق فقط
+    });
+</script>
 
 </body>
 </html>
