@@ -174,8 +174,9 @@ gap:20px;
 
 .gallery img{
 width:100%;
-height:260px;
-object-fit:cover;
+height:260px; /* يمكنك تعديل هذا الارتفاع حسب الرغبة */
+object-fit:contain; /* هذا سيظهر الصورة كاملة دون قص */
+background-color: #131c30; /* لون خلفية اختياري للمساحات الفارغة حول الصور */
 border-radius:15px;
 }
 
