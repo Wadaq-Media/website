@@ -29,10 +29,22 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo{
-font-size:28px;
-font-weight:800;
-color:#00bfff;
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #00bfff;
+    
+    /* التعديل الجديد: لجعل اللوجو والنص بجانب بعضهما تماماً */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* المسافة الفاصلة بين صورة اللوجو والنص */
+}
+
+/* تنسيق حجم وصورة اللوجو */
+.logo-img {
+    height: 50px;      /* يمكنك تكبير أو تصغير اللوجو من هنا */
+    width: auto;       /* للمحافظة على أبعاد اللوجو دون تشويه */
+    object-fit: contain;
 }
 
 .menu{
