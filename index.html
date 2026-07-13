@@ -4,13 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ودق ميديا | حيث تصير اللحظات حكاية</title>
+<title id="site-title">ودق ميديا | حيث تصير اللحظات حكاية</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght=300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="foto/logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
+<style>
+    /* تنسيق أداة اختيار اللغات في الهيدر */
+    .lang-switcher {
+        display: flex;
+        gap: 8px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .lang-btn {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: 'Cairo', sans-serif;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        background: #fff;
+        color: #000;
+        font-weight: bold;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
 </head>
 
 <body>
@@ -20,7 +50,14 @@
 
 <div class="logo">
     <img src="foto/logo.png" alt="لوجو ودق ميديا" class="logo-img">
-    <span>ودق ميديا</span>
+    <span id="logo-text">ودق ميديا</span>
+</div>
+
+<!-- أداة اختيار اللغات -->
+<div class="lang-switcher">
+    <button class="lang-btn active" onclick="changeLanguage('ar')">عربي</button>
+    <button class="lang-btn" onclick="changeLanguage('tr')">Türkçe</button>
+    <button class="lang-btn" onclick="changeLanguage('en')">English</button>
 </div>
 
 <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
@@ -28,227 +65,131 @@
 </button>
 
 <div class="menu" id="menu">
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#services">خدماتنا</a>
-<a href="#gallery">أعمالنا</a>
-<a href="#contact">تواصل معنا</a>
+    <a href="#home" data-key="nav-home">الرئيسية</a>
+    <a href="#about" data-key="nav-about">من نحن</a>
+    <a href="#services" data-key="nav-services">خدماتنا</a>
+    <a href="#gallery" data-key="nav-gallery">أعمالنا</a>
+    <a href="#contact" data-key="nav-contact">تواصل معنا</a>
 </div>
 
 </div>
 </header>
 
 <section class="hero" id="home">
-
 <div class="hero-content">
-
-<h1>ودق ميديا</h1>
-
-<h2>حيثُ تصيرُ اللَّحظاتُ حِكايَة</h2>
-
-<p>
-نحوُّلُ الأفكارَ إلى حِكايةٍ تنبضُ بلحظاتِ الجمالِ الخالدة
-</p>
-
-<a href="#contact" class="btn">
-تواصل معنا
-</a>
-
+    <h1 data-key="hero-title">ودق ميديا</h1>
+    <h2 data-key="hero-subtitle">حِيثُ تَصيرُ اللَّحَظاتُ حِكايَة</h2>
+    <p data-key="hero-desc">
+        نحوُّلُ الأفكارَ إلى حِكايةٍ تنبضُ بلحظاتِ الجمالِ الخالدة
+    </p>
+    <a href="#contact" class="btn" data-key="btn-contact">تواصل معنا</a>
 </div>
-
 </section>
 
 <section id="about">
-
 <div class="container">
-
-<h2 class="section-title">
-من نحن
-</h2>
-
-<div class="about">
-
-<p>
-أهلاً بكُم في "ودق ميديا".<br>
-نَحنُ لا نلتَقِطُ الصُّورَ فَحَسب، بل نَصنَعُ مِن كُلِّ لَحظَةٍ ذِكرى تَنبِضُ بالجمال.
- نُؤمِنُ أَنَّ كُلَّ عَميلٍ لَديهِ حِكايَةٌ فَريدَة، ودَورُنا أن نُتَرجِمَ هذه الحِكايَةَ إلى واقِعٍ بَصريٍّ مُبدِع.
-</p>
-
+    <h2 class="section-title" data-key="about-title">من نحن</h2>
+    <div class="about">
+        <p data-key="about-desc">
+            أهلاً بكُم في "ودق ميديا".<br>
+            نَحنُ لا نلتَقِطُ الصُّورَ فَحَسب، بل نَصنَعُ مِن كُلِّ لَحظَةٍ ذِكرى تَنبِضُ بالجمال.
+            نُؤمِنُ أَنَّ كُلَّ عَميلٍ لَديهِ حِكايَةٌ فَريدَة، ودَورُنا أن نُتَرجِمَ هذه الحِكايَةَ إلى واقِعٍ بَصريٍّ مُبدِع.
+        </p>
+    </div>
 </div>
-
-</div>
-
 </section>
 
 <section id="services">
-
 <div class="container">
-
-<h2 class="section-title">
-خدماتنا
-</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>📸التَّصويرُ الفوتوغرافيُّ</h3>
-<p>
-نَرصُدُ التَّفَاصيلَ بعَينٍ فَنِّيَّةٍ لِتَبقَى أبَديَّةً.
-</p>
+    <h2 class="section-title" data-key="services-title">خدماتنا</h2>
+    <div class="services">
+        <div class="card">
+            <h3 data-key="service1-title">📸 التَّصويرُ الفوتوغرافيُّ</h3>
+            <p data-key="service1-desc">نَرصُدُ التَّفَاصيلَ بعَينٍ فَنِّيَّةٍ لِتَبقَى أبَديَّةً.</p>
+        </div>
+        <div class="card">
+            <h3 data-key="service2-title">🎬 المونَتاجُ والإِنتاجُ</h3>
+            <p data-key="service2-desc">نَحيكُ المَشاهِدَ لِتَكونَ قِصَّةً مُتَكامِلةً ومُثيرة.</p>
+        </div>
+        <div class="card">
+            <h3 data-key="service3-title">📱 إِدارَةُ صَفَحاتِ السُّوشال ميديا</h3>
+            <p data-key="service3-desc">نَعتَني بِحُضورِكُم الرَّقميِّ ليَكُونَ جَذَّاباً ومُتَفاعِلاً.</p>
+        </div>
+        <div class="card">
+            <h3 data-key="service4-title">💡 صِناعَةُ الأَفكار</h3>
+            <p data-key="service4-desc">نُشارِكُكُم التَّفكير لِنَخرُجَ بأفكارٍ خَارِجَةٍ عَنِ المَألُوفِ تُعَبِّرُ عَن رُوحِ مَشروعِكُم.</p>
+        </div>
+        <div class="card">
+            <h3 data-key="service5-title">🎯 صوتُ العَميل</h3>
+            <p data-key="service5-desc">نَحنُ نَسمَعُكُم جَيِّداً، ونُتَرجِمُ رَغَباتِكُم إلى لُغَةٍ بَصَريَّةٍ تُشبِهُكُم تَماماً.</p>
+        </div>
+    </div>
 </div>
-
-<div class="card">
-<h3>🎬 المونَتاجُ والإِنتاجُ</h3>
-<p>
-نَحيكُ المَشاهِدَ لِتَكونَ قِصَّةً مُتَكامِلةً ومُثيرة.
-</p>
-</div>
-
-<div class="card">
-<h3>📱 إِدارَةُ صَفَحاتِ السُّوشال ميديا</h3>
-<p>
-نَعتَني بِحُضورِكُم الرَّقميِّ ليَكُونَ جَذَّاباً ومُتَفاعِلاً.
-
-</p>
-</div>
-
-<div class="card">
-<h3>💡 صِناعَةُ الأَفكار</h3>
-<p>
-نُشارِكُكُم التَّفكير لِنَخرُجَ بأفكارٍ خَارِجَةٍ عَنِ المَألُوفِ تُعَبِّرُ عَن رُوحِ مَشروعِكُم.
-</p>
-</div>
-
-<div class="card">
-<h3>🎯صَوتُ العَميل</h3>
-<p>
-نَحنُ نَسمَعُكُم جَيِّداً، ونُتَرجِمُ رَغَباتِكُم إلى لُغَةٍ بَصَريَّةٍ تُشبِهُكُم تَماماً.
-</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <section id="gallery">
-
 <div class="container" style="text-align: center;">
-
-<h2 class="section-title">
-معرض الأعمال
-</h2>
-
-<div class="gallery" style="margin-bottom: 40px;">
-    <a href="foto/1.jpg" data-fancybox="main-gallery"><img src="foto/1.jpg" alt="من أعمال ودق ميديا"></a>
-    <a href="foto/2.jpg" data-fancybox="main-gallery"><img src="foto/2.jpg" alt="من أعمال ودق ميديا"></a>
-    <a href="foto/3.jpg" data-fancybox="main-gallery"><img src="foto/3.jpg" alt="من أعمال ودق ميديا"></a>
-    <a href="foto/4.jpg" data-fancybox="main-gallery"><img src="foto/4.jpg" alt="من أعمال ودق ميديا"></a>
+    <h2 class="section-title" data-key="gallery-title">معرض الأعمال</h2>
+    <div class="gallery" style="margin-bottom: 40px;">
+        <a href="foto/1.jpg" data-fancybox="main-gallery"><img src="foto/1.jpg" alt="من أعمال ودق ميديا"></a>
+        <a href="foto/2.jpg" data-fancybox="main-gallery"><img src="foto/2.jpg" alt="من أعمال ودق ميديا"></a>
+        <a href="foto/3.jpg" data-fancybox="main-gallery"><img src="foto/3.jpg" alt="من أعمال ودق ميديا"></a>
+        <a href="foto/4.jpg" data-fancybox="main-gallery"><img src="foto/4.jpg" alt="من أعمال ودق ميديا"></a>
+    </div>
+    <a href="gallery.html" class="btn" data-key="btn-gallery">مشاهدة كافة أعمالنا</a>
 </div>
-
-<a href="gallery.html" class="btn">
-مشاهدة كافة أعمالنا 
-</a>
-
-</div>
-
 </section>
 
 <section id="contact">
-
 <div class="container">
-
-<h2 class="section-title">
-تواصلُوا مَعنا <br>-نَحنُ بِانتِظاركُم-
-</h2>
-<div class="about">
-    <p style="margin-bottom:40px; margin-top: 20px; ">
-        يُسعِدُنا دَوماً أن نَسمَعَ مِنكُم، لنَخُطَّ معاً فَصلاً جديداً مِن هذه الحِكايَة.
-    </p>
+    <h2 class="section-title" data-key="contact-title">تواصلُوا مَعنا <br>-نَحنُ بِانتِظاركُم-</h2>
+    <div class="about">
+        <p style="margin-bottom:40px; margin-top: 20px;" data-key="contact-subtitle">
+            يُسعِدُنا دَوماً أن نَسمَعَ مِنكُم، لنَخُطَّ معاً فَصلاً جديداً مِن هذه الحِكايَة.
+        </p>
+    </div>
+    <div class="contact">
+        <div class="contact-box">
+            <h3 data-key="contact-phone-title">الهاتف</h3>
+            <a href="tel:+905537457003" dir="ltr">+90 553 745 70 03</a>
+        </div>
+        <div class="contact-box">
+            <h3 data-key="contact-email-title">البريد الإلكتروني</h3>
+            <p><a href="mailto:wadaqmedia0@gmail.com" dir="ltr">wadaqmedia0@gmail.com</a></p>
+        </div>
+        <div class="contact-box">
+            <h3 data-key="contact-location-title">الموقع</h3>
+            <p data-key="contact-address">سلطان أيوب - إسطنبول - تركيا</p>
+        </div>
+        <div class="contact-box">
+            <h3 data-key="contact-maps-title">خرائط جوجل</h3>
+            <a href="https://maps.app.goo.gl/eHJhEpmypsCdNJ1X8" target="_blank" data-key="contact-maps-btn">فتح الموقع على خرائط جوجل</a>
+        </div>
+    </div>
+    <div class="social">
+        <a href="https://www.instagram.com/wadaq_media?igsh=cGR5aXR0bjM3ZGp0">Instagram</a>
+        <a href="https://www.facebook.com/share/1DtsdDu7WD/">Facebook</a>
+        <a href="https://youtube.com/@wadaq_media?si=4q6yT3GhhHXr6yws">YouTube</a>
+        <a href="https://www.tiktok.com/@wadaq.media?_r=1&_t=ZS-97GALb5gC5B">TikTok</a>
+    </div>
 </div>
-<div class="contact">
-
-<div class="contact-box">
-    <h3>الهاتف</h3>
-    <a href="tel:+905537457003" dir="ltr">
-        +90 553 745 70 03
-    </a>
-</div>
-
-<div class="contact-box">
-<h3>البريد الإلكتروني</h3>
-<p>
-    <a href="mailto:wadaqmedia0@gmail.com" dir="ltr">wadaqmedia0@gmail.com</a>
-</p>
-</div>
-
-<div class="contact-box">
-<h3>الموقع</h3>
-<p>سلطان أيوب - إسطنبول - تركيا</p>
-</div>
-
-<div class="contact-box">
-    <h3>خرائط جوجل</h3>
-    <a href="https://maps.app.goo.gl/eHJhEpmypsCdNJ1X8" target="_blank">
-        فتح الموقع على خرائط جوجل
-    </a>
-</div>
-
-</div>
-
-<div class="social">
-
-<a href="https://www.instagram.com/wadaq_media?igsh=cGR5aXR0bjM3ZGp0">Instagram</a>
-
-<a href="https://www.facebook.com/share/1DtsdDu7WD/">Facebook</a>
-
-<a href="https://youtube.com/@wadaq_media?si=4q6yT3GhhHXr6yws">YouTube</a>
-
-<a href="https://www.tiktok.com/@wadaq.media?_r=1&_t=ZS-97GALb5gC5B">TikTok</a>
-
-</div>
-
-</div>
-
 </section>
 
 <footer>
-
-© 2026 Wadaq Media
-<br>
-جميع الحقوق محفوظة
-
+    <span data-key="footer-text">© 2026 Wadaq Media. جميع الحقوق محفوظة</span>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/905537457003">
-💬
-</a>
+<a class="whatsapp" href="https://wa.me/905537457003">💬</a>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
 <script>
-// كود التشغيل الافتراضي
-Fancybox.bind("[data-fancybox='main-gallery']", {
-    Thumbs: { autoStart: false }
-});
-
-// كود القائمة الجانبية المكتمل بالكامل
-const menuToggle = document.getElementById('menuToggle');
-const menu = document.getElementById('menu');
-
-menuToggle.addEventListener('click', () => {
-  const isOpen = menu.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-});
-
-menu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  });
-});
+    Fancybox.bind("[data-fancybox='main-gallery']", {
+        Thumbs: { autoStart: false }
+    });
 </script>
+
+<!-- استدعاء ملف الترجمة الخارجي -->
+<script src="script.js"></script>
 
 </body>
 </html>
